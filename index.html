@@ -20,7 +20,6 @@
 
         header h1 {
             margin: 0;
-            font-size: 30px;
         }
 
         nav {
@@ -40,12 +39,7 @@
         }
 
         .hero h2 {
-            font-size: 38px;
-            margin: 10px 0;
-        }
-
-        .hero p {
-            font-size: 18px;
+            font-size: 36px;
         }
 
         .button {
@@ -55,7 +49,8 @@
             padding: 14px 25px;
             text-decoration: none;
             border-radius: 8px;
-            margin-top: 15px;
+            margin-top: 10px;
+            border: none;
         }
 
         section {
@@ -84,6 +79,28 @@
             color: #173b25;
         }
 
+        form {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #bbb;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
         footer {
             background: #173b25;
             color: white;
@@ -101,6 +118,7 @@
     <nav>
         <a href="#home">Home</a>
         <a href="#packages">Safaris</a>
+        <a href="#booking">Book</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
@@ -113,7 +131,9 @@
         with a local Kenyan tour guide.
     </p>
 
-    <a class="button" href="#packages">View Safari Packages</a>
+    <a class="button" href="#packages">
+        View Safari Packages
+    </a>
 </section>
 
 <section id="packages">
@@ -125,30 +145,65 @@
             <h3>Maasai Mara Safari</h3>
             <p>3 days of wildlife adventure in the famous Maasai Mara.</p>
             <p class="price">From $300</p>
-            <a class="button" href="#contact">Book Now</a>
         </div>
 
         <div class="card">
             <h3>Kenya Wildlife Adventure</h3>
             <p>5 days exploring Kenya's incredible wildlife and landscapes.</p>
             <p class="price">From $550</p>
-            <a class="button" href="#contact">Book Now</a>
         </div>
 
         <div class="card">
             <h3>Kenya Grand Safari</h3>
             <p>7 days of unforgettable Kenyan wildlife and adventure.</p>
             <p class="price">From $800</p>
-            <a class="button" href="#contact">Book Now</a>
         </div>
 
     </div>
 </section>
 
-<section id="contact">
-    <h2>Book Your Safari</h2>
+<section id="booking">
 
-    <p>Ready to explore Kenya?</p>
+    <h2>🦁 Book Your Safari</h2>
+
+    <p>Fill in your details and send your booking request.</p>
+
+    <form onsubmit="sendBooking(); return false;">
+
+        <input type="text" id="name"
+        placeholder="Your full name" required>
+
+        <input type="email" id="email"
+        placeholder="Your email" required>
+
+        <input type="text" id="country"
+        placeholder="Your country" required>
+
+        <input type="number" id="travelers"
+        placeholder="Number of travelers" min="1" required>
+
+        <select id="package" required>
+            <option value="">Choose a safari package</option>
+            <option>Maasai Mara Safari - $300</option>
+            <option>Kenya Wildlife Adventure - $550</option>
+            <option>Kenya Grand Safari - $800</option>
+        </select>
+
+        <input type="date" id="date" required>
+
+        <textarea id="message"
+        placeholder="Tell us anything else about your trip"></textarea>
+
+        <button class="button" type="submit">
+            Send Booking Request
+        </button>
+
+    </form>
+
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
 
     <p>Email: onkundimorgan84@gmail.com</p>
 
@@ -156,7 +211,7 @@
 
     <a class="button"
        href="https://wa.me/254704826540">
-       Contact Me on WhatsApp
+       WhatsApp Me
     </a>
 </section>
 
@@ -165,5 +220,35 @@
     <p>Discover Kenya • Experience Africa</p>
 </footer>
 
+<script>
+
+function sendBooking() {
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var country = document.getElementById("country").value;
+    var travelers = document.getElementById("travelers").value;
+    var package = document.getElementById("package").value;
+    var date = document.getElementById("date").value;
+    var message = document.getElementById("message").value;
+
+    var text =
+        "NEW SAFARI BOOKING%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Email: " + email + "%0A" +
+        "Country: " + country + "%0A" +
+        "Travelers: " + travelers + "%0A" +
+        "Package: " + package + "%0A" +
+        "Travel Date: " + date + "%0A" +
+        "Message: " + message;
+
+    window.open(
+        "https://wa.me/254704826540?text=" + text,
+        "_blank"
+    );
+}
+
+</script>
+
 </body>
-    </html>
+        </html>
