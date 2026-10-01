@@ -2,15 +2,168 @@
 <html>
 <head>
     <title>Kenya Safari Tours</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f1e8;
+            color: #222;
+        }
+
+        header {
+            background: #173b25;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        .hero {
+            padding: 70px 20px;
+            text-align: center;
+            background: #d9c9a3;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            margin: 10px 0;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #c58b2a;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        section {
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .packages {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 260px;
+            box-shadow: 0 3px 10px #bbb;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #173b25;
+        }
+
+        footer {
+            background: #173b25;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Discover Kenya</h1>
+<header>
+    <h1>🇰🇪 Kenya Safari Tours</h1>
 
-    <p>Experience unforgettable safaris and adventures with a local Kenyan tour guide.</p>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#packages">Safaris</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <button>Book Your Safari</button>
+<section class="hero" id="home">
+    <h2>Discover the Magic of Kenya</h2>
+
+    <p>
+        Experience unforgettable wildlife, culture and adventure
+        with a local Kenyan tour guide.
+    </p>
+
+    <a class="button" href="#packages">View Safari Packages</a>
+</section>
+
+<section id="packages">
+    <h2>Safari Packages</h2>
+
+    <div class="packages">
+
+        <div class="card">
+            <h3>Maasai Mara Safari</h3>
+            <p>3 days of wildlife adventure in the famous Maasai Mara.</p>
+            <p class="price">From $300</p>
+            <a class="button" href="#contact">Book Now</a>
+        </div>
+
+        <div class="card">
+            <h3>Kenya Wildlife Adventure</h3>
+            <p>5 days exploring Kenya's incredible wildlife and landscapes.</p>
+            <p class="price">From $550</p>
+            <a class="button" href="#contact">Book Now</a>
+        </div>
+
+        <div class="card">
+            <h3>Kenya Grand Safari</h3>
+            <p>7 days of unforgettable Kenyan wildlife and adventure.</p>
+            <p class="price">From $800</p>
+            <a class="button" href="#contact">Book Now</a>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Book Your Safari</h2>
+
+    <p>Ready to explore Kenya?</p>
+
+    <p>Email: onkundimorgan84@gmail.com</p>
+
+    <p>Phone: +254 704 826 540</p>
+
+    <a class="button"
+       href="https://wa.me/254704826540">
+       Contact Me on WhatsApp
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Kenya Safari Tours</p>
+    <p>Discover Kenya • Experience Africa</p>
+</footer>
 
 </body>
-</html>
+    </html>
